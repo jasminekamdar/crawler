@@ -15,7 +15,7 @@ _Image 1: Koda, Iteration 0_
 
 ### How to Run Koda
 
-Currently, Koda has no onboard computer. The onboard microprocessor must be connected to a computer via XBee in order to send commands, as the ROScore is run offboard of the Arduino.
+Currently, Koda has no onboard computer. The onboard microprocessor must be connected to a computer via USB serial or XBee in order to send commands, as the ROScore is run offboard of the Arduino.
 
 1. Connect an XBee radio USB breakout board to a laptop with ROS and the `crawler` repository set up.
 
@@ -30,11 +30,15 @@ Currently, Koda has no onboard computer. The onboard microprocessor must be conn
 * The port argument represents which port the Arduino is plugged into. To determine the port, check the Arduino IDE, or run the command `ls /dev/ttyUSB*`
 * The default for the port argument is `/dev/ttyUSB0`
 
-5. Turn on Koda's main power using the power switch.
+5. Check that Koda's differentials are in the proper position. The state of the differential can be changed via the small switches located on the front and rear axle shaft housings.
+* If you are running on a smooth surface, unlock both differentials.
+* If you are running on a slippery surface, lock both differentials.
+
+6. Connect two fully charged 11.1V LiPo batteries to Koda and slide them into the battery compartment. Turn on Koda's main power using the power switch.
 
 * If Koda is E-stopped (LED is solid ON), press the EStop button or reset the Arduino onboard.
 
-6. Press the 'A' button on the XBox controller to activate the controls.
+7. Press the 'A' button on the XBox controller to activate the controls.
 
 ### Authors
 
